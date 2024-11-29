@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 1.6rem;
+  }
+
+/*------------------------------------------------------------------------------------------*/
+/* About Me */
+/*------------------------------------------------------------------------------------------*/
+  
+  .about {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2b2a2f;
+  }
+
+  .about-container {
+    width: 100%;
+    padding: 50px 8%;
+  }
+  
+  .image-section {
+    grid-area: imageSect;
+  }
+
+  .info-section {
+    grid-area: infoSect;
+  }
+
+  .skill-section {
+    grid-area: skillSect;
+  }
+
+  .about-container .about-content {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 70px;
+    grid-template-areas: 'imageSect infoSect'
+                         'skillSect skillSect';
+  }
+  
+  .about-content .image-section {
+    position: relative;
+    min-width: 300px;
+    height: 380px;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .info-section h1 {
+    color: #dedce1;
+    font-size: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  
+  .info-section h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 110%;
+    left: 0;
+    background: #aaabb0;
+  }
+  
+  .info-section h1::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left: 0px;
+    background: #787cb5;
+  }
+  
+  .info-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #787cb5;
+    padding: 14px 0px 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+  
+  .info-section p {
+    color: #aaabb0;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+    padding-bottom: 8px;
+  }
+
+  .personal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    margin-top: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555;
+  }
+
+  .personal-info div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .personal-info div span {
+    color: #aaabb0;
+    letter-spacing: 1px;
+  }
+
+  .info-section button {
+    min-width: 150px;
+    padding: 8px 18px;
+    border: 1px solid #787cb5;
+    border-radius: 25px;
+    font-size: 18px;
+    background: #2b2a2f;
+    color: #aaabb0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top: 20px;
+  }
+
+  .info-section button:hover {
+    color: #787cb5;
+    border-color: #aaabb0;
+  }
+
+  .skill-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 80px;
+  }
+
+  .skill-section .subject {
+    font-size: 17px;
+    font-weight: thin;
+    color: #aaabb0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 16px;
+    background: #2b2a2f;
+    padding: 4px 6px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #444;
+    border-radius: 15px;
+  }
+
+  .progress-line {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #787cb5;
+    box-shadow: -1px -1px 2px #222222,
+                 1px 1px 2px #111111;
+    border-radius: 15px;
+  }
+  
+  .progress-line::after {
+    position: absolute;
+    content: attr(value);
+    top: -35px;
+    right: 0px;
+    transform: translateX(-50%);
+    color: #aaabb0;
+    font-size: 17px;
+  }
+
+/*------------------------------------------------------------------------------------------*/
+/* media */
+/*------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1068px) {
+
+    .about-container .about-content {
+        grid-template-areas: 'imageSect skillSect'
+                             'infoSect infoSect ';
+    }
+
+    .skill-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 868px) {
+
+    .about-container .about-content {
+        grid-template-areas: 'imageSect imageSect'
+                             'infoSect infoSect '
+                             'skillSect skillSect';
+    }
+
+}
+
+@media (max-width:668px) {
+
+    .personal-info {
+        grid-template-columns: 1fr;
+      }
+
+}
