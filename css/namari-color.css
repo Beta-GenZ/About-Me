@@ -160,23 +160,21 @@ body {
     color:#111;
 }
 
-/* Logo, if you are using Fonts as Logo and not image
+ 
 
 #logo h1 {
-    font-family:;
-    font-size:; 
-    font-weight:;
-    color:;
+    font-size: 30px; 
+    font-weight:800;
+    color:#000;
 }
 
 #logo h2 {
-    font-family:;
-    font-size:; 
-    font-weight:;
-    color:;
+    font-size:20px; 
+    font-weight:400;
+    color:#000;
 }
 
-*/
+
 
 
 /* Banner Typography */
