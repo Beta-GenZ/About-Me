@@ -90,13 +90,14 @@ a:hover, #header.nav-solid nav a:hover {
 }
 
 .section-heading h2:after {
-    background:#d2b356;
     content:"";
     display:block;
     width:30px;
     height:5px;
     margin-top:30px;
 }
+
+
 
 .text-center .section-heading h2:after {
     margin:30px auto 25px auto;
@@ -124,8 +125,26 @@ a:hover, #header.nav-solid nav a:hover {
 /* Banner Background and Text Colors */
 
 #banner {
-    background: url("../images/banner-images/banner-image.jpeg") no-repeat center top;
+    background: url("../images/banner-images/banner-image.jpg") no-repeat center top;
     background-size:cover;
+    height: 100vh;
+}
+
+#banner-about {
+    background: url("../images/banner-images/banner-about.jpg") no-repeat center top;
+    background-size:cover;
+    height: 100vh;
+}
+
+#banner-contact {
+    background: url("../images/banner-images/banner-contact.jpg") no-repeat center top;
+    background-size:cover;
+}
+
+#banner-contact-footer {
+    background: url("../images/banner-images/banner-contact.jpg") no-repeat center top;
+    background-size:cover;
+    height: 10vh;
 }
 
 
@@ -162,12 +181,34 @@ body {
 
 /* Banner Typography */
 
-#banner h1 {
+.web-dep {
+    width: 800px;
+
+}
+
+.web-dep h1 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size:62px;
     line-height:60px;
-    font-weight:800;
+    font-weight:700;
     color:#111;
+}
+
+
+.about h1 {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size:35px;
+    line-height:60px;
+    font-weight:400;
+    color:#111;
+}
+
+.front-end h1 {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size:62px;
+    line-height:60px;
+    font-weight:700;
+    color:#d2b356;
 }
 
 #banner h2 {
@@ -176,6 +217,7 @@ body {
     font-weight:300;
     color:#111;
 }
+
 
 
 /* Section Title and Subtitle */
@@ -268,6 +310,13 @@ h6 {
     color:#111;
 }
 
+.button-contact, input[type="submit"]  {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size:14px;
+    font-weight:bold;
+    color:#000;
+}
+
 
 /* Button Color */
 
@@ -275,12 +324,23 @@ h6 {
     border-color:#111;
 }
 
+.button-contact, input[type="submit"] {
+    border-color:#fff;
+}
+
 
 /* Button Hover Color */
 
 .button:hover,  input[type="submit"]:hover {
-    border-color:#d2b356;
-    color:#d2b356;
+    border-color:#fff;
+    color:#000;
+    opacity: 0.8;
+}
+
+.button-contact:hover,  input[type="submit"]:hover {
+    border-color:#fff;
+    color:#000;
+    opacity: 0.8;
 }
 
 
